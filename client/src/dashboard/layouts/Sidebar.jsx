@@ -1,8 +1,14 @@
 import React from "react";
-import { Link,useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { AiFillDashboard, AiOutlinePlus } from "react-icons/ai";
+import { ImProfile } from 'react-icons/im';
+import { BiNews } from 'react-icons/bi';
+import { FiUsers } from 'react-icons/fi';
 
 const Sidebar = () => {
-  const { pathname } = useLocation()
+
+  const { pathname } = useLocation();
+
   return (
     <div className="w-62.5 h-screen fixed left-0 top-0 bg-white">
       <div className="h-37.5 flex justify-center items-center space-y-2">
@@ -31,6 +37,29 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </Link>
         </li>
+        <li>
+          <Link
+            to="/dashboard/writer/add"
+            className={`px-3 ${pathname === "/dashboard/writer/add" ? "bg-indigo-500 text-white" : "bg-white text-[#404040f6]"} py-2 hover:shadow-lg hover:shadow-indigo-500/20 w-full rounded-sm flex gap-x-2 justify-start items-center hover:bg-indigo-500 hover:text-white`}
+          >
+            <span className="text-xl">
+              <AiOutlinePlus />
+            </span>
+            <span>Add Writer</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/dashboard/writers"
+            className={`px-3 ${pathname === "/dashboard/writers" ? "bg-indigo-500 text-white" : "bg-white text-[#404040f6]"} py-2 hover:shadow-lg hover:shadow-indigo-500/20 w-full rounded-sm flex gap-x-2 justify-start items-center hover:bg-indigo-500 hover:text-white`}
+          >
+            <span className="text-xl">
+              <FiUsers />
+            </span>
+            <span>Writers</span>
+          </Link>
+        </li>
+        
       </ul>
     </div>
   );
