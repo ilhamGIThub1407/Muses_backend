@@ -1,12 +1,11 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AiFillDashboard, AiOutlinePlus } from "react-icons/ai";
-import { ImProfile } from 'react-icons/im';
-import { BiNews } from 'react-icons/bi';
-import { FiUsers } from 'react-icons/fi';
+import { ImProfile } from "react-icons/im";
+import { BiNews } from "react-icons/bi";
+import { FiUsers } from "react-icons/fi";
 
 const Sidebar = () => {
-
   const { pathname } = useLocation();
 
   return (
@@ -59,7 +58,6 @@ const Sidebar = () => {
             <span>Writers</span>
           </Link>
         </li>
-        
       </ul>
     </div>
   );

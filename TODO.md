@@ -2,7 +2,8 @@
 
 ## Back End
 - [ ] Dashboard
-- [ ] Create NEWS
+- [ ] Create new NEWS
+- [ ] Simple type category news
 
 ## Frontend
 - [ ] Tailwind
